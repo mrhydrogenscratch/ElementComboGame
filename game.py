@@ -222,7 +222,6 @@ ELEMENT_CATEGORIES = {
     "cosmic storm": "arcane",
     "nebula cloud": "arcane",
     "wormhole portal": "arcane",
-    "galactic core": "arcane",
 }
 
 RECIPES = {
@@ -528,7 +527,6 @@ RECIPES = {
     frozenset(["storm", "galaxy"]): "cosmic storm",
     frozenset(["nebula", "cloud"]): "nebula cloud",
     frozenset(["wormhole", "portal"]): "wormhole portal",
-    frozenset(["galaxy", "core"]): "galactic core",
 }
 
 SAVES_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "saves")
