@@ -1,6 +1,6 @@
 # Element Combo Game
 
-A Little Alchemy-style element combination game built with PyGame. Start with 4 base elements (earth, fire, water, air) and combine them via drag-and-drop to discover 100 total elements across 7 tiers.
+A Little Alchemy-style element combination game built with PyGame. Start with 4 base elements (earth, fire, water, air) and combine them via drag-and-drop to discover 200 total elements across 7 tiers.
 
 ## Setup
 
