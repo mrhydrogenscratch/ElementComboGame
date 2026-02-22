@@ -98,9 +98,131 @@ ELEMENT_CATEGORIES = {
     "garden": "nature", "ash": "earth", "charcoal": "earth", "telescope": "machine",
     "star": "fire", "sun": "fire", "moon": "arcane", "skeleton": "arcane",
     "ghost": "arcane", "castle": "machine", "king": "life", "war": "arcane",
-    "peace": "arcane", "glass_bottle": "material", "potion": "arcane",
-    "witch": "life", "werewolf": "life", "vampire": "life", "skeleton_key": "material",
+    "peace": "arcane", "glass bottle": "material", "potion": "arcane",
+    "witch": "life", "werewolf": "life", "vampire": "life", "skeleton key": "material",
     "prison": "machine", "freedom": "arcane",
+
+    # New elements for 2.0.0 update
+    # Tier 1
+    "light": "arcane",
+    "heat": "fire",
+    "pressure": "earth",
+    "sound": "air",
+    "energy": "arcane",
+    # Tier 2
+    "ash": "earth",
+    "fog": "air",
+    "swamp": "nature",
+    "crystal": "material",
+    "volcanic ash": "earth",
+    "sandstorm": "air",
+    "rainforest": "nature",
+    "cave": "earth",
+    "coral": "nature",
+    "geyser": "water",
+    # Tier 3
+    "lightning rod": "machine",
+    "storm cloud": "air",
+    "quicksand": "earth",
+    "lava flow": "fire",
+    "tsunami": "water",
+    "fossil fuel": "earth",
+    "magma": "fire",
+    "comet": "arcane",
+    "meteor": "arcane",
+    "aurora": "arcane",
+    # Tier 4
+    "obsidian blade": "material",
+    "crystal ball": "arcane",
+    "volcano eruption": "fire",
+    "solar flare": "fire",
+    "glacier": "water",
+    "rainbow": "arcane",
+    "hurricane": "air",
+    "tornado": "air",
+    "quarry": "earth",
+    "mine": "earth",
+    # Tier 5
+    "robotic arm": "machine",
+    "factory": "machine",
+    "spaceship": "machine",
+    "satellite": "machine",
+    "black hole": "arcane",
+    "nebula": "arcane",
+    "constellation": "arcane",
+    "time machine": "arcane",
+    "magic wand": "arcane",
+    "phoenix egg": "life",
+    # Tier 6
+    "artificial intelligence": "machine",
+    "terraformer": "machine",
+    "fusion reactor": "machine",
+    "hoverboard": "machine",
+    "force field": "arcane",
+    "wormhole": "arcane",
+    "parallel universe": "arcane",
+    "time crystal": "arcane",
+    "dragon egg": "life",
+    "phoenix feather": "life",
+    # Tier 7
+    "quantum computer": "machine",
+    "space station": "machine",
+    "galaxy": "arcane",
+    "multiverse": "arcane",
+    "eternal flame": "fire",
+    "life tree": "nature",
+    "cosmic energy": "arcane",
+    "stardust": "arcane",
+    "supernova": "arcane",
+    "universe": "arcane",
+    # New elements for 2.1.0 update
+    # Tier 3
+    "obsidian": "material",
+    "geyser steam": "water",
+    "mudslide": "earth",
+    "quartz": "material",
+    "pearl": "material",
+    "coral reef": "nature",
+    "mossy rock": "nature",
+    "lava stone": "earth",
+    "volcanic glass": "material",
+    "hot spring": "water",
+    # Tier 4
+    "meteorite": "earth",
+    "fossil": "earth",
+    "stalactite": "earth",
+    "stalagmite": "earth",
+    "cave painting": "arcane",
+    "crystal shard": "material",
+    "glacial ice": "water",
+    "iceberg": "water",
+    "desert rose": "nature",
+    "oasis": "nature",
+    # Tier 5
+    "volcanic eruption": "fire",
+    "lava tube": "earth",
+    "fossilized tree": "earth",
+    "ancient ruins": "arcane",
+    "aurora borealis": "arcane",
+    "storm surge": "water",
+    "light prism": "arcane",
+    "diamond shard": "material",
+    "meteor shower": "arcane",
+    "comet tail": "arcane",
+    # Tier 6
+    "black diamond": "material",
+    "crystal cave": "arcane",
+    "volcanic island": "earth",
+    "supervolcano": "fire",
+    "ice cave": "water",
+    "frozen lake": "water",
+    "enchanted forest": "nature",
+    "ancient artifact": "arcane",
+    "star fragment": "arcane",
+    "cosmic storm": "arcane",
+    "nebula cloud": "arcane",
+    "wormhole portal": "arcane",
+    "galactic core": "arcane",
 }
 
 RECIPES = {
@@ -208,15 +330,15 @@ RECIPES = {
     frozenset(["human", "castle"]): "king",
     frozenset(["sword", "sword"]): "war",
     frozenset(["love", "war"]): "peace",
-    frozenset(["glass", "water"]): "glass_bottle",
-    frozenset(["glass_bottle", "plant"]): "potion",
+    frozenset(["glass", "water"]): "glass bottle",
+    frozenset(["glass bottle", "plant"]): "potion",
     frozenset(["human", "potion"]): "witch",
     frozenset(["animal", "moon"]): "werewolf",
     frozenset(["life", "moon"]): "vampire",
-    frozenset(["skeleton", "metal"]): "skeleton_key",
+    frozenset(["skeleton", "metal"]): "skeleton key",
     frozenset(["brick", "metal"]): "prison",
-    frozenset(["prison", "skeleton_key"]): "freedom",
-    # New recipes introduced in 2.0.0
+    frozenset(["prison", "skeleton key"]): "freedom",
+    # New recipes introduced in 1.1.0
     frozenset(["fire", "stone"]): "lava",  # Alternate way to create lava
     frozenset(["water", "fire"]): "steam",  # Alternate way to create steam
     frozenset(["fire", "cloud"]): "storm",  # Alternate way to create storm
@@ -288,9 +410,125 @@ RECIPES = {
     frozenset(["fire", "sun"]): "ash",  # Burn sun to create ash
     frozenset(["fire", "star"]): "ash",  # Burn star to create ash
     frozenset(["fire", "telescope"]): "ash",  # Burn telescope to create ash
-    frozenset(["fire", "skeleton_key"]): "ash",  # Burn skeleton key to create ash
+    frozenset(["fire", "skeleton key"]): "ash",  # Burn skeleton key to create ash
     frozenset(["fire", "potion"]): "ash",  # Burn potion to create ash
-    frozenset(["fire", "glass_bottle"]): "ash",  # Burn glass bottle to create ash
+    frozenset(["fire", "glass bottle"]): "ash",  # Burn glass bottle to create ash
+    # new recipes introduced in 2.0.0 update
+    # Tier 1
+    frozenset(["fire", "air"]): "heat",
+    frozenset(["earth", "earth"]): "pressure",
+    frozenset(["air", "energy"]): "sound",
+    frozenset(["light", "air"]): "energy",
+    # Tier 2
+    frozenset(["fire", "stone"]): "volcanic ash",
+    frozenset(["sand", "wind"]): "sandstorm",
+    frozenset(["rain", "forest"]): "rainforest",
+    frozenset(["mountain", "stone"]): "cave",
+    frozenset(["ocean", "flower"]): "coral",
+    frozenset(["water", "stone"]): "geyser",
+    frozenset(["light", "diamond"]): "crystal",
+    frozenset(["fog", "light"]): "rainbow",
+    # Tier 3
+    frozenset(["lightning", "metal"]): "lightning rod",
+    frozenset(["storm", "cloud"]): "storm cloud",
+    frozenset(["sand", "water"]): "quicksand",
+    frozenset(["lava", "water"]): "lava flow",
+    frozenset(["ocean", "storm"]): "tsunami",
+    frozenset(["coal", "pressure"]): "fossil fuel",
+    frozenset(["volcano", "lava"]): "magma",
+    frozenset(["star", "stone"]): "meteor",
+    frozenset(["ice", "star"]): "comet",
+    frozenset(["light", "storm"]): "aurora",
+    # Tier 4
+    frozenset(["crystal", "blade"]): "obsidian blade",
+    frozenset(["crystal", "glass"]): "crystal ball",
+    frozenset(["volcano", "eruption"]): "volcano eruption",
+    frozenset(["sun", "fire"]): "solar flare",
+    frozenset(["ice", "mountain"]): "glacier",
+    frozenset(["rain", "light"]): "rainbow",
+    frozenset(["storm", "ocean"]): "hurricane",
+    frozenset(["storm", "sand"]): "tornado",
+    frozenset(["mountain", "tool"]): "quarry",
+    frozenset(["earth", "tool"]): "mine",
+    # Tier 5
+    frozenset(["robot", "tool"]): "robotic arm",
+    frozenset(["robot", "factory"]): "factory",
+    frozenset(["engine", "star"]): "spaceship",
+    frozenset(["metal", "satellite"]): "satellite",
+    frozenset(["black hole", "star"]): "nebula",
+    frozenset(["star", "star"]): "constellation",
+    frozenset(["time", "machine"]): "time machine",
+    frozenset(["wand", "magic"]): "magic wand",
+    frozenset(["fire", "egg"]): "phoenix egg",
+    # Tier 6
+    frozenset(["robot", "intelligence"]): "artificial intelligence",
+    frozenset(["machine", "earth"]): "terraformer",
+    frozenset(["energy", "reactor"]): "fusion reactor",
+    frozenset(["tool", "air"]): "hoverboard",
+    frozenset(["energy", "shield"]): "force field",
+    frozenset(["black hole", "galaxy"]): "wormhole",
+    frozenset(["galaxy", "galaxy"]): "parallel universe",
+    frozenset(["crystal", "time"]): "time crystal",
+    frozenset(["dragon", "egg"]): "dragon egg",
+    frozenset(["phoenix", "fire"]): "phoenix feather",
+    # Tier 7
+    frozenset(["computer", "time"]): "quantum computer",
+    frozenset(["spaceship", "satellite"]): "space station",
+    frozenset(["galaxy", "star"]): "multiverse",
+    frozenset(["fire", "galaxy"]): "eternal flame",
+    frozenset(["tree", "life"]): "life tree",
+    frozenset(["energy", "star"]): "cosmic energy",
+    frozenset(["meteor", "star"]): "stardust",
+    frozenset(["star", "explosion"]): "supernova",
+    frozenset(["supernova", "galaxy"]): "universe",
+    # New recipes for 2.1.0 update
+    # Tier 3
+    frozenset(["lava", "water"]): "obsidian",
+    frozenset(["geyser", "steam"]): "geyser steam",
+    frozenset(["mud", "landslide"]): "mudslide",
+    frozenset(["crystal", "pressure"]): "quartz",
+    frozenset(["oyster", "sand"]): "pearl",
+    frozenset(["coral", "reef"]): "coral reef",
+    frozenset(["moss", "rock"]): "mossy rock",
+    frozenset(["lava", "stone"]): "lava stone",
+    frozenset(["volcano", "glass"]): "volcanic glass",
+    frozenset(["hot", "water"]): "hot spring",
+    # Tier 4
+    frozenset(["meteor", "earth"]): "meteorite",
+    frozenset(["bone", "earth"]): "fossil",
+    frozenset(["cave", "water"]): "stalactite",
+    frozenset(["cave", "earth"]): "stalagmite",
+    frozenset(["cave", "paint"]): "cave painting",
+    frozenset(["crystal", "shard"]): "crystal shard",
+    frozenset(["glacier", "ice"]): "glacial ice",
+    frozenset(["ice", "ocean"]): "iceberg",
+    frozenset(["desert", "flower"]): "desert rose",
+    frozenset(["desert", "water"]): "oasis",
+    # Tier 5
+    frozenset(["volcano", "eruption"]): "volcanic eruption",
+    frozenset(["lava", "cave"]): "lava tube",
+    frozenset(["tree", "fossil"]): "fossilized tree",
+    frozenset(["cave", "history"]): "ancient ruins",
+    frozenset(["aurora", "north"]): "aurora borealis",
+    frozenset(["storm", "ocean"]): "storm surge",
+    frozenset(["light", "glass"]): "light prism",
+    frozenset(["diamond", "shard"]): "diamond shard",
+    frozenset(["meteor", "storm"]): "meteor shower",
+    frozenset(["comet", "tail"]): "comet tail",
+    # Tier 6
+    frozenset(["diamond", "pressure"]): "black diamond",
+    frozenset(["cave", "crystal"]): "crystal cave",
+    frozenset(["volcano", "island"]): "volcanic island",
+    frozenset(["volcano", "eruption"]): "supervolcano",
+    frozenset(["cave", "ice"]): "ice cave",
+    frozenset(["lake", "ice"]): "frozen lake",
+    frozenset(["forest", "magic"]): "enchanted forest",
+    frozenset(["artifact", "history"]): "ancient artifact",
+    frozenset(["star", "meteor"]): "star fragment",
+    frozenset(["storm", "galaxy"]): "cosmic storm",
+    frozenset(["nebula", "cloud"]): "nebula cloud",
+    frozenset(["wormhole", "portal"]): "wormhole portal",
+    frozenset(["galaxy", "core"]): "galactic core",
 }
 
 SAVES_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "saves")
@@ -882,7 +1120,7 @@ class Game:
                             else:
                                 self.hint_text = self.get_hint()
                                 self.hint_timer = 4.0
-                                self.hint_cooldown = 120.0  # Changed from 60s to 120s
+                                self.hint_cooldown = 60.0
                             continue
 
                         # saves button
