@@ -4,10 +4,15 @@ A Little Alchemy-style element combination game built with PyGame. Start with 4 
 
 ## Setup
 
-```bash
-pip3 install pygame
-python game.py
-```
+1. Install dependencies:
+   ```bash
+   pip3 install pygame
+   ```.
+
+2. Run the game:
+   ```bash
+   python3 game.py
+   ```
 
 Requires Python 3.10+.
 

@@ -216,12 +216,88 @@ RECIPES = {
     frozenset(["skeleton", "metal"]): "skeleton_key",
     frozenset(["brick", "metal"]): "prison",
     frozenset(["prison", "skeleton_key"]): "freedom",
+    # New recipes introduced in 2.0.0
+    frozenset(["fire", "stone"]): "lava",  # Alternate way to create lava
+    frozenset(["water", "fire"]): "steam",  # Alternate way to create steam
+    frozenset(["fire", "cloud"]): "storm",  # Alternate way to create storm
+    frozenset(["fire", "rain"]): "steam",  # Alternate way to create steam
+    frozenset(["fire", "ice"]): "water",  # Melt ice into water
+    frozenset(["air", "smoke"]): "cloud",  # Alternate way to create cloud
+    frozenset(["earth", "smoke"]): "dust",  # Alternate way to create dust
+    frozenset(["water", "sand"]): "mud",  # Alternate way to create mud
+    frozenset(["fire", "metal"]): "tool",  # Alternate way to create tool
+    frozenset(["fire", "wood"]): "coal",  # Alternate way to create coal
+    frozenset(["water", "wood"]): "tree",  # Alternate way to create tree
+    frozenset(["air", "wood"]): "smoke",  # Burn wood to create smoke
+    frozenset(["earth", "wood"]): "forest",  # Alternate way to create forest
+    frozenset(["water", "coal"]): "mud",  # Coal and water create mud
+    frozenset(["fire", "coal"]): "ash",  # Alternate way to create ash
+    frozenset(["air", "coal"]): "smoke",  # Alternate way to create smoke
+    frozenset(["fire", "tool"]): "sword",  # Alternate way to create sword
+    frozenset(["water", "tool"]): "magnet",  # Alternate way to create magnet
+    frozenset(["air", "tool"]): "battery",  # Alternate way to create battery
+    frozenset(["earth", "tool"]): "brick",  # Alternate way to create brick
+    frozenset(["fire", "storm"]): "lightning",  # Alternate way to create lightning
+    frozenset(["water", "storm"]): "tsunami",  # Alternate way to create tsunami
+    frozenset(["air", "storm"]): "blizzard",  # Alternate way to create blizzard
+    frozenset(["earth", "storm"]): "volcano",  # Alternate way to create volcano
+    frozenset(["fire", "life"]): "phoenix",  # Alternate way to create phoenix
+    frozenset(["air", "life"]): "bird",  # Alternate way to create bird
+    frozenset(["water", "life"]): "fish",  # Alternate way to create fish
+    frozenset(["earth", "life"]): "animal",  # Alternate way to create animal
+    frozenset(["fire", "love"]): "art",  # Alternate way to create art
+    frozenset(["air", "love"]): "music",  # Alternate way to create music
+    frozenset(["earth", "love"]): "philosophy",  # Alternate way to create philosophy
+    frozenset(["fire", "dragon"]): "phoenix",  # Alternate way to create phoenix
+    frozenset(["fire", "flower"]): "ash",  # Burn flower to create ash
+    frozenset(["water", "flower"]): "fruit",  # Alternate way to create fruit
+    frozenset(["earth", "flower"]): "seed",  # Alternate way to create seed
+    frozenset(["fire", "tree"]): "ash",  # Burn tree to create ash
+    frozenset(["water", "tree"]): "fruit",  # Alternate way to create fruit
+    frozenset(["earth", "tree"]): "forest",  # Alternate way to create forest
+    frozenset(["fire", "ocean"]): "steam",  # Alternate way to create steam
+    frozenset(["air", "ocean"]): "wave",  # Alternate way to create wave
+    frozenset(["earth", "ocean"]): "island",  # Alternate way to create island
+    frozenset(["fire", "mountain"]): "volcano",  # Alternate way to create volcano
+    frozenset(["water", "mountain"]): "geyser",  # Alternate way to create geyser
+    frozenset(["air", "mountain"]): "storm",  # Alternate way to create storm
+    frozenset(["fire", "snow"]): "water",  # Melt snow into water
+    frozenset(["air", "snow"]): "blizzard",  # Alternate way to create blizzard
+    frozenset(["fire", "coal"]): "diamond",  # Alternate way to create diamond
+    frozenset(["fire", "metal"]): "tool",  # Alternate way to create tool
+    frozenset(["fire", "sword"]): "war",  # Alternate way to create war
+    frozenset(["love", "war"]): "peace",  # Alternate way to create peace
+    frozenset(["fire", "castle"]): "ash",  # Burn castle to create ash
+    frozenset(["fire", "book"]): "ash",  # Burn book to create ash
+    frozenset(["fire", "paper"]): "ash",  # Burn paper to create ash
+    frozenset(["fire", "forest"]): "ash",  # Burn forest to create ash
+    frozenset(["fire", "bird"]): "phoenix",  # Alternate way to create phoenix
+    frozenset(["fire", "animal"]): "dragon",  # Alternate way to create dragon
+    frozenset(["fire", "human"]): "ghost",  # Alternate way to create ghost
+    frozenset(["fire", "love"]): "art",  # Alternate way to create art
+    frozenset(["fire", "philosophy"]): "war",  # Alternate way to create war
+    frozenset(["fire", "witch"]): "ash",  # Burn witch to create ash
+    frozenset(["fire", "vampire"]): "ash",  # Burn vampire to create ash
+    frozenset(["fire", "werewolf"]): "ash",  # Burn werewolf to create ash
+    frozenset(["fire", "skeleton"]): "ash",  # Burn skeleton to create ash
+    frozenset(["fire", "ghost"]): "ash",  # Burn ghost to create ash
+    frozenset(["fire", "king"]): "ash",  # Burn king to create ash
+    frozenset(["fire", "prison"]): "freedom",  # Burn prison to create freedom
+    frozenset(["fire", "freedom"]): "ash",  # Burn freedom to create ash
+    frozenset(["fire", "moon"]): "ash",  # Burn moon to create ash
+    frozenset(["fire", "sun"]): "ash",  # Burn sun to create ash
+    frozenset(["fire", "star"]): "ash",  # Burn star to create ash
+    frozenset(["fire", "telescope"]): "ash",  # Burn telescope to create ash
+    frozenset(["fire", "skeleton_key"]): "ash",  # Burn skeleton key to create ash
+    frozenset(["fire", "potion"]): "ash",  # Burn potion to create ash
+    frozenset(["fire", "glass_bottle"]): "ash",  # Burn glass bottle to create ash
 }
 
 SAVES_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "saves")
 os.makedirs(SAVES_DIR, exist_ok=True)
 BASE_ELEMENTS = {"earth", "fire", "water", "air"}
 OVERLAP_THRESHOLD = 0.30
+MERGE_SOUND_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "merge_sound.wav")
 
 # ── Compute element tiers via BFS ──────────────────────────────────────
 ELEMENT_TIERS = {n: 0 for n in BASE_ELEMENTS}
@@ -369,6 +445,8 @@ class Game:
         self.save_list_scroll = 0
         self.save_slots: list[dict] = []
 
+        self.merge_sound = pygame.mixer.Sound(MERGE_SOUND_PATH)
+
         self._load_last_or_default()
 
     @property
@@ -474,6 +552,7 @@ class Game:
                 self.discovered.add(result)
                 self.notification = f"Discovered: {result}!"
                 self.notification_timer = 2.0
+                self.merge_sound.play()  # Play merge sound effect
         else:
             dx = b.x - a.x
             dy = b.y - a.y
@@ -803,7 +882,7 @@ class Game:
                             else:
                                 self.hint_text = self.get_hint()
                                 self.hint_timer = 4.0
-                                self.hint_cooldown = 60.0
+                                self.hint_cooldown = 120.0  # Changed from 60s to 120s
                             continue
 
                         # saves button
